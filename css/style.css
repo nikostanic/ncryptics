@@ -120,7 +120,7 @@ hr {
 }
 
 .blk-bg-section{
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0, 0.7);
 }
 
 
@@ -229,8 +229,9 @@ hr {
 }
 
 .service-item p {
-    font-size: 1rem; /* Adjust paragraph size */
+    font-size: 1.1rem; /* Adjust paragraph size */
     line-height: 1.5; /* Improve readability */
+    color: #aaa;
     margin-top: 10px; /* Add spacing between heading and paragraph */
     text-align: justify; /* Justify text for better appearance */
 }
@@ -275,7 +276,71 @@ hr {
     font-size: clamp(1.2rem, 4vw, 2.3rem); /* Responsive font size */
 }
 
-/* === Responsive Design for Process Stages ===  */
+.contact-section{
+    text-align: center;
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+}
+
+#email-us-btn {
+    background: linear-gradient(45deg, #2A7B9B, #57C785, #EDDD53, #fff);
+    background-size: 300% 300%; /* Make the gradient larger for smooth animation */
+    color: rgb(0, 0, 0, 0.8);
+    border: none;
+    padding: 20px 40px;
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    border-radius: 5px;
+    cursor: pointer;
+    animation: gradient-shift 6s infinite; /* Apply the animation */
+    transition: transform 0.2s ease-in-out;
+}
+
+#email-us-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    color: rgba(0, 0, 0, 1);
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.contact-section .material-symbols-outlined {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #a8a8a8;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+footer a{
+    color: #a8a8a8;
+    text-decoration: none;
+}
+
+footer .material-symbols-outlined {
+    vertical-align: text-bottom;
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+footer span{
+    margin: 2px 0;
+}
 
 /* For smaller screens, switch to vertical layout and vertical arrow */
 @media (max-width: 992px) {
