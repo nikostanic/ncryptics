@@ -111,23 +111,18 @@ hr {
     margin-top: 0;
 }
 
-.darker-bg-section{
+.mid-dark-bg-section{
     background-color: rgb(33, 33, 33, 0.8);
 }
 
-.royal-section-bg{
-    background: rgb(19, 54, 92, 0.3);
+.high-dark-bg-section{
+    background-color: rgb(20, 20, 20, 0.8);
 }
 
-.slight-dk-bg{
-    background: rgb(33, 33, 33, 0.8);
+.blk-bg-section{
+    background-color: rgb(0, 0, 0, 0.8);
 }
 
-
-.light-section-container{
-    background-color: rgb(245, 245, 247);
-    color: #333;
-}
 
 .team-members-container{
     display: flex;
@@ -240,16 +235,25 @@ hr {
     text-align: justify; /* Justify text for better appearance */
 }
 
+.grid-split-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center; /* Center items vertically */
+}
+
+.grid-split-section hr{
+    display: none;
+}
+
 .grid-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Default grid layout */
-    gap: 10px; /* Space between items */
     align-items: center; /* Align items vertically */
     justify-items: center; /* Center items horizontally */
+    grid-template-rows: repeat(6, 1fr 0.2fr);
 }
 
 .process-stage{
-    text-align: left;
+    text-align: center;
 }
 
 .process-stage .material-symbols-outlined {
@@ -262,25 +266,13 @@ hr {
 }
 
 
-.process-stage-separator img {
-    display: none; /* Hide all arrows by default */
-}
-
-.process-stage-separator .arrow-horizontal {
-    display: block; /* Show horizontal arrow by default */
-}
-
-.process-stage-separator .arrow-vertical {
-    display: none; /* Hide vertical arrow by default */
-}
-
 .stages-summary p {
-    background: linear-gradient(45deg, #97c1e3, #cebe75); /* Define the gradient colors */
+    background: linear-gradient(45deg, #ffffff, #cebe75); /* Define the gradient colors */
     -webkit-background-clip: text; /* Clip the background to the text */
     background-clip: text; /* Fallback for non-WebKit browsers */
     -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
     text-fill-color: transparent; /* Fallback for non-WebKit browsers */
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 4vw, 2.3rem); /* Responsive font size */
 }
 
 /* === Responsive Design for Process Stages ===  */
@@ -289,14 +281,6 @@ hr {
 @media (max-width: 992px) {
     .grid-steps {
         grid-template-columns: 1fr; /* Single column for smaller screens */
-    }
-
-    .process-stage-separator .arrow-horizontal {
-        display: none; /* Hide horizontal arrow */
-    }
-
-    .process-stage-separator .arrow-vertical {
-        display: block; /* Show vertical arrow */
     }
 
     .process-stage{
@@ -317,17 +301,5 @@ hr {
     
     .service-img-s{
         display: block;
-    }
-}
-
-
-/* For wider screens, keep horizontal layout and horizontal arrow */
-@media (min-width: 992px) {
-    .process-stage-separator .arrow-horizontal {
-        display: block; /* Show horizontal arrow */
-    }
-
-    .process-stage-separator .arrow-vertical {
-        display: none; /* Hide vertical arrow */
     }
 }
