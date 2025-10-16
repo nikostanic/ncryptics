@@ -359,7 +359,6 @@ footer span{
 }
 
 
-
 @media (max-width: 768px){
     .nav-logo-img{
         width: 200px;
@@ -379,7 +378,6 @@ footer span{
     .nav-links.show {
         display: flex;
         z-index: 10;
-        background: rgb(0, 0, 0, 0.8);
     }
 
     .nav-links.show li{
@@ -388,12 +386,19 @@ footer span{
 
     .menu-toggle {
         display: block;
+    }
 
+    .service-item{
+        padding: 20px;
     }
 
     .service-img{
         height: 300px;
         width: 300px;
+    }
+
+    .team-member-card{
+        width: 90%;
     }
 }
 
