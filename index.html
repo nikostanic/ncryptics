@@ -22,8 +22,11 @@
         <nav>
             <div class="nav-container">
                 <div class="nav-logo">
-                    <h1>> NCRYPTICS</h1>
+                    <img class="nav-logo-img" src="./img/nav-logo.svg" alt="NCRYPTICS Logo">
                 </div>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
                 <ul class="nav-links">
                     <li><a href="#services">Services</a></li>
                     <li><a href="#process">Process</a></li>
@@ -50,53 +53,51 @@
                 <ul class="services-list">
                     <li class="service-item">
                         <div class="service-header">
-                            <img class="service-image service-img-l" src="./img/CustomSW-l.svg" alt="CustomSWBanner">
-                            <img class="service-image service-img-s" src="./img/CustomSw-s.svg" alt="CustomSWBanner">
+                            <img class="service-image service-img" src="./img/CustomSW-l.svg" alt="CustomSWBanner">
                         </div>
                         <p>We build tailored software solutions to meet your unique business needs.</p>
                     </li>
                     <li class="service-item">
                         <div class="service-header">
                             <div class="service-header">
-                                <img class="service-image service-img-l" src="./img/Backlog-l.svg" alt="CustomSWBanner">
-                                <img class="service-image service-img-s" src="./img/CustomSw-s.svg" alt="CustomSWBanner">
+                                <img class="service-image service-img" src="./img/Backlog-l.svg" alt="CustomSWBanner">
                             </div>
                         </div>
                         <p>Streamline your projects with expert backlog and management support.</p>
                     </li>
                     <li class="service-item">
                         <div class="service-header">
-                            <img class="service-image service-img-l" src="./img/WebApps-l.svg" alt="WebAppBanner">
+                            <img class="service-image service-img" src="./img/WebApps-l.svg" alt="WebAppBanner">
                         </div>
                         <p>Create responsive and scalable web applications for your business.</p>
                     </li>
                     <li class="service-item">
                         <div class="service-header">
-                            <img class="service-image service-img-l" src="./img/Mobile-l.svg" alt="MobileAppBanner">
+                            <img class="service-image service-img" src="./img/Mobile-l.svg" alt="MobileAppBanner">
                         </div>
                         <p>Develop mobile apps that deliver seamless user experiences.</p>
                     </li>
                     <li class="service-item">
                         <div class="service-header">
-                            <img class="service-image service-img-l" src="./img/APIs-l.svg" alt="APIBanner">
+                            <img class="service-image service-img" src="./img/APIs-l.svg" alt="APIBanner">
                         </div>
                         <p>Connect your systems with robust API solutions.</p>
                     </li>
                     <li class="service-item">
                         <div class="service-header">
-                            <img class="service-image service-img-l" src="./img/Consulting-l.svg" alt="ConsultingBanner">
+                            <img class="service-image service-img" src="./img/Consulting-l.svg" alt="ConsultingBanner">
                         </div>
                         <p>Get expert advice to optimize your software strategy.</p>
                     </li>
                     <li class="service-item">
                         <div class="service-header">
-                            <img class="service-image service-img-l" src="./img/Tests-l.svg" alt="TestPlanBanner">
+                            <img class="service-image service-img" src="./img/Tests-l.svg" alt="TestPlanBanner">
                         </div>
                         <p>Ensure quality with comprehensive test design and management.</p>
                     </li>
                     <li class="service-item">
                         <div class="service-header">
-                            <img class="service-image service-img-l" src="./img/Support-l.svg" alt="MaintenanceBanner">
+                            <img class="service-image service-img" src="./img/Support-l.svg" alt="MaintenanceBanner">
                         </div>
                         <p>Keep your software running smoothly with ongoing support.</p>
                     </li>
@@ -223,8 +224,23 @@
         </div>
         <footer>
             <span>NCRYPTICS Software Services</span>
-            <span><span class="material-symbols-outlined">pin_drop</span>Prnjavor, Bosnia & Herzegovina</span>
+            <span><span class="material-symbols-outlined">pin_drop</span>Prnjavor 78430, Bosnia & Herzegovina</span>
             <span><span class="material-symbols-outlined">mail</span><a href="mailto:nikola@ncryptics.com">nikola@ncryptics.com</a></span>
         </footer>
     </body>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the menu when a link is clicked (for better UX on mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
+        });
+    </script>
 </html>
